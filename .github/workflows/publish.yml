@@ -21,8 +21,8 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       
     - name: Build Docker image
-      run: docker build . --file Dockerfile --tag randilt/flask-github-actions-app
+      run: docker build . --file Dockerfile --tag $DOCKER_USERNAME/testrepokavi:python
       
     - name: Push into Docker Hub
-      run: docker push randilt/flask-github-actions-app
+      run: docker push  $DOCKER_USERNAME/testrepokavi:python
         
