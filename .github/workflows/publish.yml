@@ -21,8 +21,8 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       
     - name: Build Docker image
-      run: docker build -t arasankavi/testrepokavi .
+      run: docker build -t arasankavi/testrepokavi:1 .
       
     - name: Push into Docker Hub
-      run: docker push arasankavi/testrepokavi
+      run: docker push arasankavi/testrepokavi:1
         
